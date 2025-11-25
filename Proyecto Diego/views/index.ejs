@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuarios</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  
+    <div class="navbar">
+        <span class="info-label">Usuario usado: <strong><%= name %></strong></span>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="main-title">Gestión de Usuarios</h1>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>CORREO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td>
+                        <a href="/edit/<%= user.id%>" class="action-btn edit">Editar</a>
+                        <a href="/delete/<%= user.id%>" class="action-btn delete">Eliminar</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <div class="add-user-section">
+            <h3>Agregar Nuevo</h3>
+            <form action="/add" method="post" class="inline-form">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+
+        <div class="logout-container">
+            <hr class="divider">
+            <a href="/login/logout" class="btn-logout-bottom">Salir</a>
+        </div>
+
+    </div> 
+</body>
+</html>

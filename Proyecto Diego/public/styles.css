@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", "Helvetica Neue", sans-serif;
+    background-color: #f0f0f0; 
+    color: #333;
+}
+
+a { 
+    color: #002B7A;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+a:hover { 
+    color: #D59F0F;
+    text-decoration: underline; 
+}
+
+h1, h2, h3 { 
+    color: #002B7A;
+    text-shadow: 1px 1px 0px #fff; 
+}
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #e5e5e5;
+}
+
+.form-container {
+    background: #fff;
+    padding: 35px;
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #D59F0F; 
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    background: #fcfcfc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #D59F0F;
+    box-shadow: 0 0 5px rgba(213, 159, 15, 0.5);
+    outline: none;
+}
+
+button, .btn-logout-bottom {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    background: #002B7A; 
+    background: linear-gradient(to bottom, #1C3D6E 0%, #002B7A 100%);
+    border: 1px solid #001A4B;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 3px rgba(0,0,0,0.2);
+}
+
+button:hover, .btn-logout-bottom:hover {
+    background: linear-gradient(to bottom, #002B7A 0%, #001538 100%);
+}
+
+button:active {
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    background: linear-gradient(to bottom, #002B7A 0%, #001A4B 100%);
+    padding: 12px 40px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 4px solid #D59F0F;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.info-label {
+    color: #D59F0F;
+    font-size: 13px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid #D59F0F;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+.main-title {
+    text-align: left;
+    color: #002B7A;
+    border-bottom: 2px solid #D59F0F;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #aaa;
+}
+
+.user-table thead {
+    background: linear-gradient(to bottom, #D59F0F 0%, #B58500 100%);
+    border-bottom: 1px solid #946d00;
+}
+
+.user-table th {
+    padding: 12px;
+    text-align: left;
+    color: #001A4B;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-right: 1px solid #c99610;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.user-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #eee;
+    color: #333;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.user-table tbody tr:hover {
+    background-color: #fff8e1;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 3px;
+    color: white;
+    margin-right: 5px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+}
+
+.edit {
+    background: linear-gradient(to bottom, #3498db 0%, #2980b9 100%);
+    border: 1px solid #2980b9;
+}
+
+.delete {
+    background: linear-gradient(to bottom, #e74c3c 0%, #c0392b 100%);
+    border: 1px solid #c0392b;
+}
+
+.add-user-section {
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #002B7A;
+}
+
+.add-user-section h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.inline-form {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-form button {
+    width: auto;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #D59F0F 0%, #be8e0d 100%);
+    border: 1px solid #9e760b;
+    color: #001A4B;
+}
+
+.inline-form button:hover {
+    background: linear-gradient(to bottom, #be8e0d 0%, #9e760b 100%);
+}
+
+.logout-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.btn-logout-bottom {
+    display: inline-block;
+    width: auto;
+    padding: 10px 40px;
+    background: linear-gradient(to bottom, #cb2c2c 0%, #a01d1d 100%);
+    border: 1px solid #8a1313;
+}
